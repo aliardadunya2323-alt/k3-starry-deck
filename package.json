@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node tools/build.mjs",
     "start": "node tools/serve.mjs",
-    "test": "node tools/check-motion.mjs"
+    "test": "node tools/check-motion.mjs && node tools/check-gate.mjs",
+    "protect": "node tools/protect.mjs"
   },
   "devDependencies": {
     "esbuild": "0.28.2"
