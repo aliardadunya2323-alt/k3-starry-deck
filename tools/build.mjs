@@ -1,0 +1,16 @@
+import path from 'node:path';
+import fs from 'node:fs/promises';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const require=createRequire(import.meta.url);
+const esbuild=process.env.K3_DEMO_MODULES ? require(path.join(process.env.K3_DEMO_MODULES,'esbuild')) : require('esbuild');
+const vendor=path.join(root,'source/vendor/three');
+const result=await esbuild.build({entryPoints:[path.join(root,'source/deck.js')],outfile:path.join(root,'site/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,metafile:true,legalComments:'eof',plugins:[{name:'local-three',setup(build){build.onResolve({filter:/^three(?:\/|$)/},args=>({path:args.path==='three'?path.join(vendor,'three.module.min.js'):path.join(vendor,args.path.slice(6))}));}}]});
+await fs.writeFile(path.join(root,'build-manifest.json'),JSON.stringify(result.metafile,null,2));
+const version=createHash('sha256').update(await fs.readFile(path.join(root,'site/app.js'))).digest('hex').slice(0,12);
+const htmlPath=path.join(root,'site/index.html');
+const html=await fs.readFile(htmlPath,'utf8');
+await fs.writeFile(htmlPath,html.replace(/src="app\.js(?:\?v=[a-f0-9]+)?"/,`src="app.js?v=${version}"`));
+console.log('Built site/app.js; deploy only site/.');

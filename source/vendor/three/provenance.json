@@ -1,0 +1,110 @@
+{
+  "name": "three",
+  "version": "0.185.1",
+  "revision": "r185",
+  "license": "MIT",
+  "homepage": "https://threejs.org/",
+  "source": "https://registry.npmjs.org/three/-/three-0.185.1.tgz",
+  "tar_sha256": "a2143f5bf978bd3470a51024b2b6bdd581913ba8f36ff1538d433f3a95adf2df",
+  "vendored_at": "2026-09-07T02:16:35.032Z",
+  "vendored_by": "3D模式/tools/vendor-three.mjs",
+  "note": "只放 3D 模式用到的文件；三 min 文件为官方 build，未做任何修改。importmap 映射 three → three.module.min.js，three/addons/ → addons/。",
+  "total_bytes": 1088794,
+  "files": {
+    "three.module.min.js": {
+      "bytes": 365552,
+      "sha256": "86bcee248b64f44bcfc23c331ae74619061957d59cab040171dcb6fb5900beb6",
+      "from": "package/build/three.module.min.js"
+    },
+    "three.core.min.js": {
+      "bytes": 385386,
+      "sha256": "05b2609338c76cd65daf74f3ac515bc9a5045e1b3b33edc07d8c9bd55250fa90",
+      "from": "package/build/three.core.min.js"
+    },
+    "LICENSE": {
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "from": "package/LICENSE"
+    },
+    "addons/controls/OrbitControls.js": {
+      "bytes": 40504,
+      "sha256": "faabb4e8dfd9235ee4a9fd7c9a3d75f90f1689dbd4944bd6fd32117dacec5f93",
+      "from": "package/examples/jsm/controls/OrbitControls.js"
+    },
+    "addons/loaders/SVGLoader.js": {
+      "bytes": 76850,
+      "sha256": "a58536582ec55d41d9ed8bedaf0633398cf9004110cb4a9741d572bded4a3129",
+      "from": "package/examples/jsm/loaders/SVGLoader.js"
+    },
+    "addons/loaders/GLTFLoader.js": {
+      "bytes": 114959,
+      "sha256": "97642d720f16cc9a0c9844934198e4d0c023bea8e89576d0f7545d03b2d103d2",
+      "from": "package/examples/jsm/loaders/GLTFLoader.js"
+    },
+    "addons/renderers/CSS2DRenderer.js": {
+      "bytes": 7384,
+      "sha256": "dc5f4c5075a3a330b7e679da943343dd86a0f2d745422194b5287e48d7204197",
+      "from": "package/examples/jsm/renderers/CSS2DRenderer.js"
+    },
+    "addons/postprocessing/EffectComposer.js": {
+      "bytes": 8501,
+      "sha256": "4e079a5886152d7e529a59aef644e968ab4d32c6a33ce016b36bf29b2eac26f7",
+      "from": "package/examples/jsm/postprocessing/EffectComposer.js"
+    },
+    "addons/postprocessing/RenderPass.js": {
+      "bytes": 4280,
+      "sha256": "817f6c3cdcd0fd41515d112359ea0532568eefb5aabd3b33903957ebca1b8a6a",
+      "from": "package/examples/jsm/postprocessing/RenderPass.js"
+    },
+    "addons/postprocessing/ShaderPass.js": {
+      "bytes": 3228,
+      "sha256": "e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d",
+      "from": "package/examples/jsm/postprocessing/ShaderPass.js"
+    },
+    "addons/postprocessing/MaskPass.js": {
+      "bytes": 4694,
+      "sha256": "7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3",
+      "from": "package/examples/jsm/postprocessing/MaskPass.js"
+    },
+    "addons/postprocessing/Pass.js": {
+      "bytes": 4218,
+      "sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5",
+      "from": "package/examples/jsm/postprocessing/Pass.js"
+    },
+    "addons/postprocessing/UnrealBloomPass.js": {
+      "bytes": 14921,
+      "sha256": "1158bb02f6467889aba19c1a788b9107054d7f6a558498b5e2152db5873bb859",
+      "from": "package/examples/jsm/postprocessing/UnrealBloomPass.js"
+    },
+    "addons/postprocessing/OutputPass.js": {
+      "bytes": 4184,
+      "sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272",
+      "from": "package/examples/jsm/postprocessing/OutputPass.js"
+    },
+    "addons/shaders/CopyShader.js": {
+      "bytes": 729,
+      "sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718",
+      "from": "package/examples/jsm/shaders/CopyShader.js"
+    },
+    "addons/shaders/LuminosityHighPassShader.js": {
+      "bytes": 1291,
+      "sha256": "5044f780b6e6cf863947f64c36fe1587132f7fbe395ada863cd1e5f0388dcf1e",
+      "from": "package/examples/jsm/shaders/LuminosityHighPassShader.js"
+    },
+    "addons/shaders/OutputShader.js": {
+      "bytes": 1876,
+      "sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2",
+      "from": "package/examples/jsm/shaders/OutputShader.js"
+    },
+    "addons/utils/BufferGeometryUtils.js": {
+      "bytes": 37621,
+      "sha256": "5c552223a9309883743b80538d6e9cdb45e3227f30d3ec56fb2c39b46e78d595",
+      "from": "package/examples/jsm/utils/BufferGeometryUtils.js"
+    },
+    "addons/utils/SkeletonUtils.js": {
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "from": "package/examples/jsm/utils/SkeletonUtils.js"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="color-scheme" content="dark"><meta name="robots" content="noindex,nofollow">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+ <title>夜航 · 星空甲板</title><link rel="icon" href="assets/sigil-mini.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <main id="scene" aria-label="可探索的星空甲板"></main>
+ <header class="masthead"><div><span class="eyebrow">K3 / INTERACTIVE WORLD</span><h1>夜航<span>星空甲板</span></h1></div><button id="help" aria-label="查看操作说明">操作说明 <kbd>H</kbd></button></header>
+ <div id="loading" role="status"><img src="assets/sigil.svg" alt=""><h2>点亮星海</h2><p id="loading-text">正在准备甲板与旅人…</p><button id="retry" hidden>重新尝试</button></div>
+ <div id="toast" role="status" aria-live="polite"></div>
+ <div class="bottom"><p class="hint">W A S D 移动 · 拖动环顾 · 滚轮远近 · 空格跳跃</p><nav class="skills" aria-label="技能"><button data-action="swing"><kbd>F</kbd><span>挥杖</span></button><button data-action="dash"><kbd>1</kbd><span>闪电步</span></button><button data-action="hex"><kbd>2</kbd><span>魔法阵</span></button><button data-action="rose"><kbd>3</kbd><span>星空玫瑰</span></button><button data-action="ult"><kbd>4</kbd><span>玫瑰大阵</span></button><button data-action="form"><kbd>5</kbd><span>切换形态</span></button><button data-action="jump" class="touch-jump"><kbd>↑</kbd><span>跳跃</span></button></nav><p class="caption">一艘船，一片星海。随意走走，也可以试试魔法。</p></div>
+ <aside id="joystick" hidden aria-hidden="true"><i></i></aside>
+ <dialog id="instructions"><button class="close" aria-label="关闭操作说明">×</button><span class="eyebrow">WELCOME ABOARD</span><h2>在星海里，停留一会儿。</h2><p>这是 K3 的一段独立互动体验。你可以在甲板漫步、观察旅人，或用魔法点亮夜空。</p><dl><dt>移动 / 奔跑</dt><dd>W A S D / Shift</dd><dt>环顾 / 远近</dt><dd>鼠标拖动 / 滚轮</dd><dt>跳跃 / 挥杖</dt><dd>空格 / F</dd><dt>技能 / 形态</dt><dd>1—4 / 5，或点击底部按钮</dd></dl><p class="small">手机：左下区域拖动移动，右侧拖动环顾，双指缩放。玫瑰大阵会自动拉远镜头；再次点击可收阵。</p><button class="primary" id="continue">回到甲板</button></dialog>
+ <script type="module" src="app.js?v=7f01aedf9b88"></script>
+</body></html>

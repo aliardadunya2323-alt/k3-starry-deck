@@ -1,0 +1,14 @@
+{
+  "name": "k3-starry-deck",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "start": "node tools/serve.mjs",
+    "test": "node tools/check-motion.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "license": "MIT"
+}
